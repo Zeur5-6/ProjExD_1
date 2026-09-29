@@ -20,8 +20,8 @@ def main():
         kk_img = pg.transform.rotozoom(kk_img, 10, 1.0)
     
 
-        screen.blit(bg_img, [0, 0])
-        screen.blit(kk_img, [tmr, 200])
+        screen.blit(bg_img, [tmr, 0])
+        screen.blit(kk_img, [300, 200])
     
        
         pg.display.update()
