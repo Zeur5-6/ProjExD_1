@@ -28,14 +28,19 @@ def main():
         # kk_img = pg.transform.rotozoom(kk_img, 10, 1.0)
 
         key_list = pg.key.get_pressed()
+        posi = (0,0)
         if key_list[pg.K_UP]:
-            kk_rct.move_ip((0, -1))
+            posi = (0,-1)
         elif key_list[pg.K_DOWN]:
-            kk_rct.move_ip((0,1))
+            posi = (0,1)
         elif key_list[pg.K_RIGHT]:
-            kk_rct.move_ip((1, 0))
+            posi = (1,0)
         elif key_list[pg.K_LEFT]:
-            kk_rct.move_ip((-1,0))
+            posi = (-1,0)
+        kk_rct.move_ip(-1, 0)
+
+            
+        kk_rct.move_ip(posi)
 
         bg2_img = pg.transform.flip(bg_img, True, False)
         
