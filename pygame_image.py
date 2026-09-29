@@ -37,6 +37,8 @@ def main():
         elif key_list[pg.K_LEFT]:
             kk_rct.move_ip((-1,0))
 
+        kk_rct.move_ip((-1, 0))
+        
         bg2_img = pg.transform.flip(bg_img, True, False)
         
         screen.blit(bg_img, [-tmr, 0])
