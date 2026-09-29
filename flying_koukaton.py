@@ -28,30 +28,15 @@ def main():
         # kk_img = pg.transform.rotozoom(kk_img, 10, 1.0)
 
         key_list = pg.key.get_pressed()
-        # if key_list[pg.K_UP]:
-        #     kk_rct.move_ip((0, -1))
-        # elif key_list[pg.K_DOWN]:
-        #     kk_rct.move_ip((0,1))
-        # elif key_list[pg.K_RIGHT]:
-        #     kk_rct.move_ip((1, 0))
-        # elif key_list[pg.K_LEFT]:
-        #     kk_rct.move_ip((-1,0))
-        posi = (0, 0)
-        try:
-            if key_list[pg.K_UP]:
-                posi = (0,-1)
-            elif key_list[pg.K_DOWN]:
-                posi = (0, 1)
-            elif key_list[pg.K_RIGHT]:
-                posi = (1, 0)
-            elif key_list[pg.K_LEFT]:
-                posi = (-1, 0)
-        finally:
-            kk_rct.move_ip(posi)
-        
-        
-        kk_rct.move_ip((-1, 0))
-        
+        if key_list[pg.K_UP]:
+            kk_rct.move_ip((0, -1))
+        elif key_list[pg.K_DOWN]:
+            kk_rct.move_ip((0,1))
+        elif key_list[pg.K_RIGHT]:
+            kk_rct.move_ip((1, 0))
+        elif key_list[pg.K_LEFT]:
+            kk_rct.move_ip((-1,0))
+
         bg2_img = pg.transform.flip(bg_img, True, False)
         
         screen.blit(bg_img, [-tmr, 0])
